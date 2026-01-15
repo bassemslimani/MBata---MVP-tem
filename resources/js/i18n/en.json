@@ -1,0 +1,582 @@
+{
+    "app": {
+        "name": "Mbata",
+        "tagline": "Find your perfect stay in Algeria"
+    },
+    "nav": {
+        "home": "Home",
+        "properties": "Properties",
+        "promotions": "Real Estate",
+        "owner": "For Owners",
+        "admin": "Administration",
+        "dashboard": "Dashboard",
+        "my_bookings": "My Bookings",
+        "login": "Log in",
+        "register": "Register",
+        "logout": "Logout",
+        "profile": "My Profile",
+        "view_site": "View Site"
+    },
+    "home": {
+        "hero": {
+            "title": "Find Your Perfect Stay in Algeria",
+            "subtitle": "Discover unique homes, villas, and apartments for your next vacation. From the beaches of Oran to the mountains of Kabylie.",
+            "search": {
+                "destination": "Destination",
+                "check_in": "Check-in",
+                "check_out": "Check-out",
+                "guests": "Guests",
+                "button": "Search"
+            }
+        },
+        "featured": {
+            "title": "Featured Properties",
+            "subtitle": "Hand-picked accommodations for your perfect stay"
+        },
+        "how_it_works": {
+            "title": "How It Works",
+            "subtitle": "Book your perfect vacation in 3 simple steps",
+            "search": {
+                "title": "Search",
+                "description": "Find the perfect property by location, dates, and amenities"
+            },
+            "book": {
+                "title": "Book",
+                "description": "Choose your dates and book securely online"
+            },
+            "enjoy": {
+                "title": "Enjoy",
+                "description": "Arrive at your destination and enjoy your stay"
+            }
+        },
+        "cta": {
+            "title": "List Your Property on Mbata",
+            "subtitle": "Are you a property owner? Join thousands of hosts who are earning money by renting their homes on Mbata.",
+            "button": "Become a Host"
+        }
+    },
+    "search": {
+        "title": "Search",
+        "where_going": "Where are you going?",
+        "results": "properties found",
+        "no_results": "No properties found",
+        "try_different": "Try adjusting your search criteria",
+        "filters": "Filters",
+        "clear_all": "Clear all",
+        "apply": "Apply",
+        "property_type": "Property Type",
+        "price_range": "Price per night (DA)",
+        "bedrooms": "Bedrooms",
+        "location": "Location",
+        "amenities": "Amenities",
+        "guest": "guest",
+        "guests": "guests",
+        "night": "night",
+        "sort_by": "Sort by",
+        "recommended": "Recommended",
+        "price_low": "Price: Low to High",
+        "price_high": "Price: High to Low",
+        "rating": "Highest Rated",
+        "newest": "Newest",
+        "select_wilaya": "Select a wilaya",
+        "select_commune": "Select a commune",
+        "searching": "Searching...",
+        "in_location": "in \"{location}\""
+    },
+    "property": {
+        "verified": "Verified",
+        "available": "Available",
+        "unavailable": "Unavailable",
+        "per_night": "/ night",
+        "guests": "guests",
+        "beds": "beds",
+        "bedrooms": "bedrooms",
+        "bathrooms": "bathrooms",
+        "surface": "m²",
+        "show": {
+            "overview": "Overview",
+            "amenities": "Amenities",
+            "reviews": "Reviews",
+            "location": "Location",
+            "book_now": "Book Now",
+            "check_availability": "Check Availability",
+            "contact_host": "Contact Host",
+            "favorite": "Favorite",
+            "remove_favorite": "Remove from favorites",
+            "superhost": "Superhost",
+            "instant_book": "Instant Book",
+            "new_listing": "New Listing",
+            "about_place": "About this place",
+            "what_place_offers": "What this place offers",
+            "see_all_amenities": "See all amenities",
+            "owner_response": "Owner Response",
+            "write_review": "Write a review",
+            "owner_response_label": "Owner Response",
+            "show_on_map": "Show on map",
+            "exact_location": "Exact location provided after booking",
+            "free_cancellation": "Free cancellation",
+            "cancellation_hours": "48 hours notice",
+            "self_checkin": "Self check-in",
+            "keypad_available": "Key pad available",
+            "about_this_place": "About this place",
+            "property_type": "Property type",
+            "reviews_count": "{count} reviews",
+            "hosted_by": "Hosted by",
+            "contact_the_host": "Contact the host",
+            "similar_properties": "Similar Properties"
+        },
+        "gallery": {
+            "show_photos": "View photos",
+            "of": "of"
+        },
+        "reviews": {
+            "title": "Reviews",
+            "based_on": "based on {count} reviews",
+            "see_all": "See all reviews",
+            "write_review": "Write a review",
+            "update_review": "Update review",
+            "submit_review": "Submit review",
+            "rating": "Rating",
+            "poor": "Poor",
+            "fair": "Fair",
+            "good": "Good",
+            "very_good": "Very Good",
+            "excellent": "Excellent",
+            "your_rating": "Your rating",
+            "your_review": "Your review",
+            "share_experience": "Share your experience",
+            "review_guidelines": "Review Guidelines",
+            "be_honest": "Be honest and specific",
+            "mention_cleanliness": "Mention the cleanliness, amenities, and host",
+            "no_personal_info": "No personal info or offensive language",
+            "min_chars": "{count} more characters required",
+            "min_chars_met": "Minimum length met",
+            "chars_count": "{count} / 1000"
+        },
+        "booking": {
+            "title": "Confirm and pay",
+            "your_trip": "Your Trip",
+            "trip_details": "Trip Details",
+            "change_dates": "Change dates",
+            "guest_info": "Guest Information",
+            "guest_info_required": "(Required for booking)",
+            "first_name": "First name",
+            "last_name": "Last name",
+            "email": "Email",
+            "phone": "Phone",
+            "message_to_host": "Message to host (optional)",
+            "message_placeholder": "Let the host know your arrival time or any special requests...",
+            "pay_with": "Pay with",
+            "credit_card": "Credit/Debit Card",
+            "ccp": "CCP (Algeria)",
+            "cash_arrival": "Pay on Arrival",
+            "card_name": "Name on card",
+            "card_number": "Card number",
+            "expiry": "Expiry date",
+            "cvv": "CVV",
+            "ccp_account": "CCP Account Number",
+            "account_name": "Account Name",
+            "ccp_notice": "You will receive payment instructions to complete your booking via CCP.",
+            "cash_notice_title": "Pay on arrival",
+            "cash_notice": "You'll pay the full amount when you arrive at the property. Please bring cash.",
+            "cancellation_policy": "Cancellation Policy",
+            "free_cancel_48h": "Free cancellation for 48 hours",
+            "cancel_before": "Cancel before check-in on {date} for a full refund",
+            "cancel_after_48h": "After that, cancel anytime before check-in and get a 50% refund",
+            "no_refund_checkin": "No refund if cancelled after check-in",
+            "learn_more": "Learn more about cancellation policy",
+            "terms_accept": "I agree to the",
+            "house_rules": "House Rules",
+            "terms_of_service": "Terms of Service",
+            "privacy_policy": "Privacy Policy",
+            "confirm_and_pay": "Confirm and pay {price} DA",
+            "processing": "Processing...",
+            "taxes_included": "Taxes included. No hidden fees.",
+            "secure_payment": "Secure payment",
+            "powered_by_stripe": "Powered by Stripe"
+        }
+    },
+    "client": {
+        "dashboard": {
+            "title": "Welcome back!",
+            "subtitle": "Here's what's happening with your bookings",
+            "upcoming_trips": "Upcoming trips",
+            "completed_trips": "Completed trips",
+            "total_spent": "Total spent",
+            "favorite_count": "Favorites",
+            "no_upcoming": "No upcoming trips",
+            "start_exploring": "Start exploring",
+            "explore_properties": "Explore Properties",
+            "your_favorites": "Your Favorites",
+            "view_all": "View all",
+            "quick_actions": "Quick Actions",
+            "find_place": "Find a Place",
+            "discover_new": "Discover new places",
+            "my_trips_button": "My Trips",
+            "view_bookings": "View bookings",
+            "saved_properties": "Saved properties"
+        },
+        "reservations": {
+            "title": "My Trips",
+            "subtitle": "Manage your bookings and reservations",
+            "upcoming": "Upcoming",
+            "completed": "Completed",
+            "cancelled": "Cancelled",
+            "view_details": "View Details",
+            "contact_host": "Contact Host",
+            "book_new": "Book New Trip",
+            "no_upcoming_trips": "No upcoming trips",
+            "start_exploring": "Start exploring!",
+            "no_completed_trips": "You haven't completed any trips yet.",
+            "no_cancelled": "No cancelled trips.",
+            "status": {
+                "pending": "Pending",
+                "confirmed": "Confirmed",
+                "completed": "Completed",
+                "cancelled": "Cancelled"
+            },
+            "show": {
+                "booking_number": "Booking #",
+                "download_invoice": "Download Invoice",
+                "booking_details": "Booking Details",
+                "check_in": "Check-in",
+                "check_out": "Check-out",
+                "from_time": "From 3:00 PM",
+                "until_time": "Until 11:00 AM",
+                "nights_away": "{days} days away",
+                "get_directions": "Get directions",
+                "your_host": "Your Host",
+                "response_rate": "Responds {rate}% of the time",
+                "your_review": "Your Review",
+                "thank_you_feedback": "Thank you for your feedback!",
+                "leave_review": "Leave a review",
+                "cancel_reservation": "Cancel Reservation",
+                "cancellation_only_48h": "Cancellation is only available until 48 hours before check-in",
+                "message_host": "Send message to host",
+                "safety_info": "Safety Information",
+                "verified_property": "Verified property",
+                "customer_support": "24/7 customer support",
+                "secure_payment_guaranteed": "Secure payment guaranteed",
+                "get_help": "Get help"
+            }
+        },
+        "favorites": {
+            "title": "Favorites",
+            "properties_saved": "{count} properties saved",
+            "no_favorites": "No favorites yet",
+            "no_favorites_subtitle": "Save properties you love by clicking the heart icon. They'll appear here for easy access.",
+            "saved_date": "Saved {date}",
+            "remove_favorite": "Remove from favorites",
+            "removing": "Removing...",
+            "discover_more": "Discover More",
+            "explore_new_places": "Explore new places",
+            "my_trips": "My Trips",
+            "view_bookings": "View bookings",
+            "edit_profile": "Edit Profile",
+            "update_preferences": "Update preferences"
+        },
+        "profile": {
+            "title": "Account Settings",
+            "subtitle": "Manage your profile and preferences",
+            "profile_updated": "Profile updated successfully!",
+            "update_failed": "Failed to update profile.",
+            "password_updated": "Password updated successfully!",
+            "password_failed": "Failed to update password.",
+            "preferences_updated": "Preferences updated successfully!",
+            "tabs": {
+                "profile": "Profile",
+                "security": "Security",
+                "preferences": "Preferences"
+            },
+            "profile_info": "Profile Information",
+            "change_photo": "Change photo",
+            "first_name": "First Name",
+            "last_name": "Last Name",
+            "email_address": "Email Address",
+            "phone_number": "Phone Number",
+            "date_of_birth": "Date of Birth",
+            "bio": "Bio",
+            "bio_placeholder": "Tell us a little about yourself...",
+            "save_changes": "Save Changes",
+            "saving": "Saving...",
+            "change_password": "Change Password",
+            "current_password": "Current Password",
+            "new_password": "New Password",
+            "confirm_password": "Confirm New Password",
+            "update_password": "Update Password",
+            "updating": "Updating...",
+            "password_requirements": "Password requirements:",
+            "at_least_8": "At least 8 characters long",
+            "uppercase_lowercase": "Contains uppercase and lowercase letters",
+            "at_least_one_number": "Contains at least one number",
+            "login_sessions": "Login Sessions",
+            "current_session": "Current session",
+            "active_now": "Active now",
+            "preferences": "Preferences",
+            "language": "Language",
+            "currency": "Currency",
+            "email_notifications": "Email Notifications",
+            "receive_booking_updates": "Receive emails about your bookings",
+            "promotional_emails": "Promotional Emails",
+            "receive_special_offers": "Receive special offers and recommendations",
+            "save_preferences": "Save Preferences",
+            "danger_zone": "Danger Zone",
+            "danger_subtitle": "Once you delete your account, there is no going back.",
+            "delete_account": "Delete Account"
+        }
+    },
+    "booking_widget": {
+        "check_availability": "Check Availability",
+        "checking": "Checking...",
+        "book_now": "Book Now",
+        "processing": "Processing...",
+        "not_charged_yet": "You won't be charged yet",
+        "contact_instead": "Contact owner instead",
+        "free_cancellation": "Free cancellation for 48 hours"
+    },
+    "auth": {
+        "login": {
+            "title": "Log in",
+            "email": "Email",
+            "password": "Password",
+            "remember": "Remember me",
+            "forgot_password": "Forgot your password?",
+            "button": "Log in"
+        },
+        "register": {
+            "title": "Create an account",
+            "name": "Full name",
+            "email": "Email",
+            "phone": "Phone",
+            "password": "Password",
+            "password_confirmation": "Confirm Password",
+            "button": "Register"
+        }
+    },
+    "owner": {
+        "dashboard": {
+            "title": "Dashboard",
+            "welcome": "Welcome back! Here's an overview of your properties.",
+            "total_properties": "Total Properties",
+            "active": "active",
+            "total_reservations": "Total Reservations",
+            "pending": "pending",
+            "total_earnings": "Total Earnings",
+            "this_month": "this month",
+            "average_rating": "Average Rating",
+            "quick_actions": "Quick Actions",
+            "add_property": "Add Property",
+            "manage_properties": "Manage Properties",
+            "view_bookings": "View Bookings",
+            "view_earnings": "View Earnings",
+            "recent_reservations": "Recent Reservations",
+            "no_reservations": "No reservations yet"
+        },
+        "properties": {
+            "title": "My Properties",
+            "subtitle": "Manage your vacation rentals",
+            "add_property": "Add Property",
+            "no_properties": "No properties found",
+            "get_started": "Get started by adding your first property.",
+            "add_first": "Add Your First Property",
+            "stats": {
+                "total": "Total",
+                "active": "Active",
+                "verified": "Verified",
+                "pending_verification": "Pending"
+            },
+            "filters": {
+                "status": "Status",
+                "all": "All Properties",
+                "active_filter": "Active",
+                "inactive": "Inactive",
+                "verified": "Verified",
+                "pending": "Pending Verification",
+                "apply": "Apply Filters",
+                "clear": "Clear"
+            },
+            "actions": {
+                "view": "View on site",
+                "activate": "Activate",
+                "deactivate": "Deactivate",
+                "edit": "Edit",
+                "photos": "Photos",
+                "availability": "Availability",
+                "delete": "Delete"
+            },
+            "delete_modal": {
+                "title": "Delete Property",
+                "confirm": "Are you sure you want to delete \"{property}\"? This action cannot be undone.",
+                "cancel": "Cancel",
+                "delete": "Delete",
+                "deleting": "Deleting..."
+            },
+            "form": {
+                "title": "Add New Property",
+                "subtitle": "List your vacation rental on Mbata",
+                "steps": {
+                    "basic": "Basic Info",
+                    "location": "Location",
+                    "details": "Details",
+                    "amenities": "Amenities",
+                    "photos": "Photos"
+                },
+                "basic": {
+                    "title": "Basic Information",
+                    "property_type": "Property Type",
+                    "property_category": "Category",
+                    "select_type": "Select type",
+                    "select_category": "Select category",
+                    "property_title": "Property Title",
+                    "title_placeholder": "e.g., Beautiful Villa with Sea View",
+                    "description": "Description",
+                    "description_placeholder": "Describe your property, its features, and what makes it special...",
+                    "characters": "characters"
+                },
+                "location": {
+                    "title": "Location",
+                    "wilaya": "Wilaya",
+                    "commune": "Commune",
+                    "select_wilaya": "Select a wilaya",
+                    "select_commune": "Select a commune",
+                    "address": "Address",
+                    "address_placeholder": "Street address, building, floor...",
+                    "latitude": "Latitude",
+                    "longitude": "Longitude",
+                    "optional": "Optional",
+                    "use_location": "Use my current location"
+                },
+                "details": {
+                    "title": "Property Details",
+                    "surface_area": "Surface Area (m²)",
+                    "bedrooms": "Bedrooms",
+                    "bathrooms": "Bathrooms",
+                    "rooms": "Rooms",
+                    "max_guests": "Max Guests",
+                    "select_guests": "Select max guests",
+                    "price_per_night": "Price per night"
+                },
+                "amenities": {
+                    "title": "Amenities",
+                    "subtitle": "Select the amenities available at your property",
+                    "selected": "amenit(ies) selected"
+                },
+                "photos": {
+                    "title": "Photos",
+                    "subtitle": "Add at least one photo to showcase your property. The first photo will be the primary image.",
+                    "upload": "Click to upload or drag-drop",
+                    "max_files": "PNG, JPG up to 5MB (max {max} images)",
+                    "max_reached": "Maximum number of images reached",
+                    "no_images": "No images uploaded",
+                    "no_images_hint": "Add at least one image to showcase your property",
+                    "primary": "Primary",
+                    "set_primary": "Set as primary",
+                    "delete_image": "Delete",
+                    "uploading": "Uploading...",
+                    "images_count": "{count} / {max} images"
+                },
+                "buttons": {
+                    "previous": "Previous",
+                    "next_step": "Next Step",
+                    "create": "Create Property",
+                    "creating": "Creating...",
+                    "save": "Save",
+                    "saving": "Saving..."
+                }
+            },
+            "photos_page": {
+                "title": "Property Photos",
+                "upload_manage": "Upload & Manage Photos",
+                "tips": {
+                    "title": "Photo Tips",
+                    "lighting": "Use bright, natural lighting",
+                    "show_rooms": "Show all main rooms and spaces",
+                    "exterior": "Include exterior and views",
+                    "cover": "First image becomes the cover photo",
+                    "size": "Recommended size: 1920x1080px"
+                },
+                "stats": {
+                    "total": "Total Photos",
+                    "primary": "Primary Photo"
+                },
+                "actions": {
+                    "manage_availability": "Manage Availability",
+                    "preview": "Preview Listing",
+                    "back": "Back to Properties"
+                }
+            },
+            "availability_page": {
+                "title": "Availability Calendar",
+                "stats": {
+                    "total_days": "Total Days",
+                    "available": "Available",
+                    "unavailable": "Unavailable",
+                    "booked": "Booked"
+                },
+                "calendar": {
+                    "loading": "Loading availability...",
+                    "how_to_use": "How to use:",
+                    "instructions": {
+                        "select": "Click a day to start selection, then click another day to select a range",
+                        "mode": "First click determines the mode (set available or unavailable)",
+                        "toggle": "Click on unavailable dates to make them available",
+                        "toggle_available": "Click on available dates to make them unavailable"
+                    },
+                    "legend": {
+                        "unavailable": "Unavailable",
+                        "available": "Available",
+                        "booked": "Booked",
+                        "selected": "Selected"
+                    }
+                },
+                "actions": {
+                    "manage_photos": "Manage Photos",
+                    "edit_details": "Edit Details",
+                    "view_bookings": "View Bookings",
+                    "all_properties": "All Properties"
+                }
+            }
+        }
+    },
+    "admin": {
+        "dashboard": {
+            "title": "Admin Dashboard",
+            "subtitle": "Monitor and manage your platform.",
+            "total_users": "Total Users",
+            "manage_users": "Manage users",
+            "pending_verifications": "Pending Verifications",
+            "recent_activity": "Recent Activity",
+            "pending_payments": "Pending Payments",
+            "all_caught_up": "All caught up!"
+        }
+    },
+    "common": {
+        "view_all": "View all",
+        "loading": "Loading...",
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit",
+        "confirm": "Confirm",
+        "close": "Close",
+        "back": "Back",
+        "next": "Next",
+        "previous": "Previous",
+        "required": "Required",
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "days_ago": "{count} days",
+        "weeks_ago": "{count} weeks",
+        "months_ago": "{count} months",
+        "years_ago": "{count} years",
+        "nights": "nights",
+        "night": "night",
+        "total": "Total",
+        "cleaning_fee": "Cleaning fee",
+        "service_fee": "Service fee",
+        "yes": "Yes",
+        "no": "No",
+        "any": "Any",
+        "or": "or"
+    }
+}

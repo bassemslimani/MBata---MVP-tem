@@ -1,0 +1,582 @@
+{
+    "app": {
+        "name": "مباتا",
+        "tagline": "ابحث عن إقامة مثالية في الجزائر"
+    },
+    "nav": {
+        "home": "الرئيسية",
+        "properties": "العقارات",
+        "promotions": "العقارات",
+        "owner": "للمالكين",
+        "admin": "الإدارة",
+        "dashboard": "لوحة التحكم",
+        "my_bookings": "حجوزاتي",
+        "login": "تسجيل الدخول",
+        "register": "إنشاء حساب",
+        "logout": "تسجيل الخروج",
+        "profile": "ملفي الشخصي",
+        "view_site": "عرض الموقع"
+    },
+    "home": {
+        "hero": {
+            "title": "ابحث عن إقامتك المثالية في الجزائر",
+            "subtitle": "اكتشف مساكن فريدة وفيللا وشقق لعطلتك القادمة. من شواطئ وهران إلى جبال القبائل.",
+            "search": {
+                "destination": "الوجهة",
+                "check_in": "تسجيل الوصول",
+                "check_out": "تسجيل المغادرة",
+                "guests": "الضيوف",
+                "button": "بحث"
+            }
+        },
+        "featured": {
+            "title": "عقارات مميزة",
+            "subtitle": "أماكن إقامة مختارة بعناية لعطلة مثالية"
+        },
+        "how_it_works": {
+            "title": "كيف يعمل",
+            "subtitle": "احجز عطلتك المثالية في 3 خطوات بسيطة",
+            "search": {
+                "title": "ابحث",
+                "description": "ابحث عن العقار المثالي حسب الموقع والتاريخ والمرافق"
+            },
+            "book": {
+                "title": "احجز",
+                "description": "اختر تواريخك واحجز أونلاين بأمان"
+            },
+            "enjoy": {
+                "title": "استمتع",
+                "description": "وصل إلى وجهتك واستمتع بإقامتك"
+            }
+        },
+        "cta": {
+            "title": "أدر عقارك على مباتا",
+            "subtitle": "هل أنت مالك؟ انضم إلى آلاف المضيفين الذين يكسبون المال من تأجير منازلهم على مباتا.",
+            "button": "كن مضيفاً"
+        }
+    },
+    "search": {
+        "title": "بحث",
+        "where_going": "إلى أين أنت ذاهب؟",
+        "results": "عقار وجد",
+        "no_results": "لم يتم العثور على عقارات",
+        "try_different": "حاول تعديل معايير البحث",
+        "filters": "الفلاتر",
+        "clear_all": "مسح الكل",
+        "apply": "تطبيق",
+        "property_type": "نوع العقار",
+        "price_range": "السعر لكل ليلة (دج)",
+        "bedrooms": "غرف النوم",
+        "location": "الموقع",
+        "amenities": "المرافق",
+        "guest": "ضيف",
+        "guests": "ضيوف",
+        "night": "ليلة",
+        "sort_by": "ترتيب حسب",
+        "recommended": "موصى به",
+        "price_low": "السعر: من الأقل للأكثر",
+        "price_high": "السعر: من الأكثر للأقل",
+        "rating": "الأعلى تقييماً",
+        "newest": "الأحدث",
+        "select_wilaya": "اختر الولاية",
+        "select_commune": "اختر البلدية",
+        "searching": "جارٍ البحث...",
+        "in_location": "في \"{location}\""
+    },
+    "property": {
+        "verified": "موثق",
+        "available": "متاح",
+        "unavailable": "غير متاح",
+        "per_night": "/ ليلة",
+        "guests": "ضيوف",
+        "beds": "أسرة",
+        "bedrooms": "غرف نوم",
+        "bathrooms": "حمامات",
+        "surface": "م²",
+        "show": {
+            "overview": "نظرة عامة",
+            "amenities": "المرافق",
+            "reviews": "التقييمات",
+            "location": "الموقع",
+            "book_now": "احجز الآن",
+            "check_availability": "تحقق من التوفر",
+            "contact_host": "اتصل بالمضيف",
+            "favorite": "مفضل",
+            "remove_favorite": "إزالة من المفضلة",
+            "superhost": "مضيف مميز",
+            "instant_book": "حجز فوري",
+            "new_listing": "قائمة جديدة",
+            "about_place": "عن هذا المكان",
+            "what_place_offers": "ما يقدمه هذا المكان",
+            "see_all_amenities": "عرض جميع المرافق",
+            "owner_response": "رد المالك",
+            "write_review": "اكتب تقييم",
+            "owner_response_label": "رد المالك",
+            "show_on_map": "عرض على الخريطة",
+            "exact_location": "سيتم توفير الموقع الدقيق بعد الحجز",
+            "free_cancellation": "إلغاء مجاني",
+            "cancellation_hours": "إشعار 48 ساعة",
+            "self_checkin": "تسجيل دخول ذاتي",
+            "keypad_available": "لوحة مفاتيح متاحة",
+            "about_this_place": "عن هذا المكان",
+            "property_type": "نوع العقار",
+            "reviews_count": "{count} تقييم",
+            "hosted_by": "استضافة",
+            "contact_the_host": "اتصل بالمضيف",
+            "similar_properties": "عقارات مماثلة"
+        },
+        "gallery": {
+            "show_photos": "عرض الصور",
+            "of": "من"
+        },
+        "reviews": {
+            "title": "التقييمات",
+            "based_on": "بناءً على {count} تقييم",
+            "see_all": "عرض جميع التقييمات",
+            "write_review": "اكتب تقييم",
+            "update_review": "تعديل التقييم",
+            "submit_review": "إرسال التقييم",
+            "rating": "التقييم",
+            "poor": "ضعيف",
+            "fair": "مقبول",
+            "good": "جيد",
+            "very_good": "جيد جداً",
+            "excellent": "ممتاز",
+            "your_rating": "تقييمك",
+            "your_review": "تقييمك",
+            "share_experience": "شارك تجربتك",
+            "review_guidelines": "إرشادات التقييم",
+            "be_honest": "كن صادقاً ومحدداً",
+            "mention_cleanliness": "اذكر النظافة والمرافق والمضيف",
+            "no_personal_info": "لا معلومات شخصية أو لغة مسيئة",
+            "min_chars": "{count} أحرف إضافية مطلوبة",
+            "min_chars_met": "الحد الأدنى للطول مستوفي",
+            "chars_count": "{count} / 1000"
+        },
+        "booking": {
+            "title": "تأكيد ودفع",
+            "your_trip": "رحلتك",
+            "trip_details": "تفاصيل الرحلة",
+            "change_dates": "تغيير التواريخ",
+            "guest_info": "معلومات الضيف",
+            "guest_info_required": "(مطلوب للحجز)",
+            "first_name": "الاسم الأول",
+            "last_name": "اسم العائلة",
+            "email": "البريد الإلكتروني",
+            "phone": "الهاتف",
+            "message_to_host": "رسالة للمضيف (اختياري)",
+            "message_placeholder": "أعلم المضيف بوقت وصولك أو أي طلبات خاصة...",
+            "pay_with": "الدفع عبر",
+            "credit_card": "بطاقة ائتمان/خصم",
+            "ccp": "CCP (الجزائر)",
+            "cash_arrival": "الدفع عند الوصول",
+            "card_name": "الاسم على البطاقة",
+            "card_number": "رقم البطاقة",
+            "expiry": "تاريخ الانتهاء",
+            "cvv": "رمز الأمان",
+            "ccp_account": "رقم حساب CCP",
+            "account_name": "اسم الحساب",
+            "ccp_notice": "س تتلقى تعليمات الدفع لإتمام حجزك عبر CCP.",
+            "cash_notice_title": "الدفع عند الوصول",
+            "cash_notice": "ستدفع المبلغ الكامل عند وصولك إلى العقار. يرجى إحضار نقود.",
+            "cancellation_policy": "سياسة الإلغاء",
+            "free_cancel_48h": "إلغاء مجاني لمدة 48 ساعة",
+            "cancel_before": "ألغِ قبل تسجيل الوصول في {date} لاسترداد كامل",
+            "cancel_after_48h": "بعد ذلك، ألغِ في أي وقت قبل تسجيل الوصول للحصول على استرداد 50%",
+            "no_refund_checkin": "لا استرداد إذا تم الإلغاء بعد تسجيل الوصول",
+            "learn_more": "اعرف المزيد عن سياسة الإلغاء",
+            "terms_accept": "أوافق على",
+            "house_rules": "قواعد المنزل",
+            "terms_of_service": "شروط الخدمة",
+            "privacy_policy": "سياسة الخصوصية",
+            "confirm_and_pay": "تأكيد ودفع {price} دج",
+            "processing": "جارٍ المعالجة...",
+            "taxes_included": "الضرائب مشمولة. لا توجد رسوم خفية.",
+            "secure_payment": "دفع آمن",
+            "powered_by_stripe": "مدعوم بواسطة Stripe"
+        }
+    },
+    "client": {
+        "dashboard": {
+            "title": "مرحباً بعودتك!",
+            "subtitle": "إليك ما يحدث مع حجوزاتك",
+            "upcoming_trips": "رحلات قادمة",
+            "completed_trips": "رحلات مكتملة",
+            "total_spent": "إجمالي الإنفاق",
+            "favorite_count": "المفضلة",
+            "no_upcoming": "لا توجد رحلات قادمة",
+            "start_exploring": "ابدأ الاستكشاف",
+            "explore_properties": "استكشاف العقارات",
+            "your_favorites": "المفضلة",
+            "view_all": "عرض الكل",
+            "quick_actions": "إجراءات سريعة",
+            "find_place": "ابحث عن مكان",
+            "discover_new": "اكتشف أماكن جديدة",
+            "my_trips_button": "رحلاتي",
+            "view_bookings": "عرض الحجوزات",
+            "saved_properties": "العقارات المحفوظة"
+        },
+        "reservations": {
+            "title": "رحلاتي",
+            "subtitle": "إدارة الحجوزات والحجوزات",
+            "upcoming": "قادمة",
+            "completed": "مكتملة",
+            "cancelled": "ملغاة",
+            "view_details": "عرض التفاصيل",
+            "contact_host": "اتصل بالمضيف",
+            "book_new": "احجز رحلة جديدة",
+            "no_upcoming_trips": "لا توجد رحلات قادمة",
+            "start_exploring": "ابدأ الاستكشاف!",
+            "no_completed_trips": "لم تكمل أي رحلة بعد.",
+            "no_cancelled": "لا توجد رحلات ملغاة.",
+            "status": {
+                "pending": "قيد الانتظار",
+                "confirmed": "مؤكد",
+                "completed": "مكتمل",
+                "cancelled": "ملغي"
+            },
+            "show": {
+                "booking_number": "حجز رقم",
+                "download_invoice": "تحميل الفاتورة",
+                "booking_details": "تفاصيل الحجز",
+                "check_in": "تسجيل الوصول",
+                "check_out": "تسجيل المغادرة",
+                "from_time": "من 3:00 م",
+                "until_time": "حتى 11:00 ص",
+                "nights_away": "خلال {days} أيام",
+                "get_directions": "الحصول على الاتجاهات",
+                "your_host": "مضيفك",
+                "response_rate": "يرد {rate}% من الوقت",
+                "your_review": "تقييمك",
+                "thank_you_feedback": "شكراً على ملاحظاتك!",
+                "leave_review": "اترك تقييم",
+                "cancel_reservation": "إلغاء الحجز",
+                "cancellation_only_48h": "الإلغاء متاح فقط حتى 48 ساعة قبل تسجيل الوصول",
+                "message_host": "إرسال رسالة للمضيف",
+                "safety_info": "معلومات الأمان",
+                "verified_property": "عقار موثق",
+                "customer_support": "دعم العملاء 24/7",
+                "secure_payment_guaranteed": "دفع آمن مضمون",
+                "get_help": "احصل على مساعدة"
+            }
+        },
+        "favorites": {
+            "title": "المفضلة",
+            "properties_saved": "{count} عقارات محفوظة",
+            "no_favorites": "لا توجد مفضلة بعد",
+            "no_favorites_subtitle": "احفظ العقارات التي تحبها بالنقر على أيقونة القلب. ستظهر هنا للوصول السهل.",
+            "saved_date": "حفظ في {date}",
+            "remove_favorite": "إزالة من المفضلة",
+            "removing": "جارٍ الإزالة...",
+            "discover_more": "اكتشف المزيد",
+            "explore_new_places": "استكشاف أماكن جديدة",
+            "my_trips": "رحلاتي",
+            "view_bookings": "عرض الحجوزات",
+            "edit_profile": "تعديل الملف الشخصي",
+            "update_preferences": "تحديث التفضيلات"
+        },
+        "profile": {
+            "title": "إعدادات الحساب",
+            "subtitle": "إدارة ملفك الشخصي وتفضيلاتك",
+            "profile_updated": "تم تحديث الملف الشخصي بنجاح!",
+            "update_failed": "فشل تحديث الملف الشخصي.",
+            "password_updated": "تم تحديث كلمة المرور بنجاح!",
+            "password_failed": "فشل تحديث كلمة المرور.",
+            "preferences_updated": "تم تحديث التفضيلات بنجاح!",
+            "tabs": {
+                "profile": "الملف الشخصي",
+                "security": "الأمان",
+                "preferences": "التفضيلات"
+            },
+            "profile_info": "معلومات الملف الشخصي",
+            "change_photo": "تغيير الصورة",
+            "first_name": "الاسم الأول",
+            "last_name": "اسم العائلة",
+            "email_address": "عنوان البريد الإلكتروني",
+            "phone_number": "رقم الهاتف",
+            "date_of_birth": "تاريخ الميلاد",
+            "bio": "السيرة الذاتية",
+            "bio_placeholder": "أخبرنا قليلاً عن نفسك...",
+            "save_changes": "حفظ التغييرات",
+            "saving": "جارٍ الحفظ...",
+            "change_password": "تغيير كلمة المرور",
+            "current_password": "كلمة المرور الحالية",
+            "new_password": "كلمة المرور الجديدة",
+            "confirm_password": "تأكيد كلمة المرور الجديدة",
+            "update_password": "تحديث كلمة المرور",
+            "updating": "جارٍ التحديث...",
+            "password_requirements": "متطلبات كلمة المرور:",
+            "at_least_8": "8 أحرف على الأقل",
+            "uppercase_lowercase": "تحتوي على أحرف كبيرة وصغيرة",
+            "at_least_one_number": "تحتوي على رقم واحد على الأقل",
+            "login_sessions": "جلسات تسجيل الدخول",
+            "current_session": "الجلسة الحالية",
+            "active_now": "نشط الآن",
+            "preferences": "التفضيلات",
+            "language": "اللغة",
+            "currency": "العملة",
+            "email_notifications": "إشعارات البريد الإلكتروني",
+            "receive_booking_updates": "تلقي رسائل بريد إلكتروني حول حجوزاتك",
+            "promotional_emails": "رسائل بريد إلكتروني ترويجية",
+            "receive_special_offers": "تلقي عروض خاصة وتوصيات",
+            "save_preferences": "حفظ التفضيلات",
+            "danger_zone": "منطقة الخطر",
+            "danger_subtitle": "بمجرد حذف حسابك، لا يوجد رجوع.",
+            "delete_account": "حذف الحساب"
+        }
+    },
+    "booking_widget": {
+        "check_availability": "تحقق من التوفر",
+        "checking": "جارٍ التحقق...",
+        "book_now": "احجز الآن",
+        "processing": "جارٍ المعالجة...",
+        "not_charged_yet": "لن يتم خصمك بعد",
+        "contact_instead": "اتصل بالمالك بدلاً من ذلك",
+        "free_cancellation": "إلغاء مجاني لمدة 48 ساعة"
+    },
+    "auth": {
+        "login": {
+            "title": "تسجيل الدخول",
+            "email": "البريد الإلكتروني",
+            "password": "كلمة المرور",
+            "remember": "تذكرني",
+            "forgot_password": "نسيت كلمة المرور؟",
+            "button": "تسجيل الدخول"
+        },
+        "register": {
+            "title": "إنشاء حساب",
+            "name": "الاسم الكامل",
+            "email": "البريد الإلكتروني",
+            "phone": "الهاتف",
+            "password": "كلمة المرور",
+            "password_confirmation": "تأكيد كلمة المرور",
+            "button": "إنشاء حساب"
+        }
+    },
+    "owner": {
+        "dashboard": {
+            "title": "لوحة التحكم",
+            "welcome": "مرحباً بعودتك! إليك نظرة عامة على عقاراتك.",
+            "total_properties": "إجمالي العقارات",
+            "active": "نشطة",
+            "total_reservations": "إجمالي الحجوزات",
+            "pending": "قيد الانتظار",
+            "total_earnings": "إجمالي الأرباح",
+            "this_month": "هذا الشهر",
+            "average_rating": "متوسط التقييم",
+            "quick_actions": "إجراءات سريعة",
+            "add_property": "إضافة عقار",
+            "manage_properties": "إدارة العقارات",
+            "view_bookings": "عرض الحجوزات",
+            "view_earnings": "عرض الأرباح",
+            "recent_reservations": "الحجوزات الأخيرة",
+            "no_reservations": "لا توجد حجوزات حتى الآن"
+        },
+        "properties": {
+            "title": "عقاراتي",
+            "subtitle": "إدارة تأجيراتك للعطلات",
+            "add_property": "إضافة عقار",
+            "no_properties": "لم يتم العثور على عقارات",
+            "get_started": "ابدأ بإضافة أول عقار لك.",
+            "add_first": "إضافة أول عقار",
+            "stats": {
+                "total": "الإجمالي",
+                "active": "نشطة",
+                "verified": "موثقة",
+                "pending_verification": "قيد الانتظار"
+            },
+            "filters": {
+                "status": "الحالة",
+                "all": "جميع العقارات",
+                "active_filter": "نشطة",
+                "inactive": "غير نشطة",
+                "verified": "موثقة",
+                "pending": "قيد الانتظار للتحقق",
+                "apply": "تطبيق الفلاتر",
+                "clear": "مسح"
+            },
+            "actions": {
+                "view": "عرض على الموقع",
+                "activate": "تفعيل",
+                "deactivate": "إلغاء التفعيل",
+                "edit": "تعديل",
+                "photos": "الصور",
+                "availability": "التوفر",
+                "delete": "حذف"
+            },
+            "delete_modal": {
+                "title": "حذف العقار",
+                "confirm": "هل أنت متأكد من حذف \"{property}\"؟ لا يمكن التراجع عن هذا الإجراء.",
+                "cancel": "إلغاء",
+                "delete": "حذف",
+                "deleting": "جارٍ الحذف..."
+            },
+            "form": {
+                "title": "إضافة عقار جديد",
+                "subtitle": "أدر تأجير عطلتك على مباتا",
+                "steps": {
+                    "basic": "المعلومات الأساسية",
+                    "location": "الموقع",
+                    "details": "التفاصيل",
+                    "amenities": "المرافق",
+                    "photos": "الصور"
+                },
+                "basic": {
+                    "title": "المعلومات الأساسية",
+                    "property_type": "نوع العقار",
+                    "property_category": "الفئة",
+                    "select_type": "اختر النوع",
+                    "select_category": "اختر الفئة",
+                    "property_title": "عنوان العقار",
+                    "title_placeholder": "مثال: فيلا جميلة بإطلال على البحر",
+                    "description": "الوصف",
+                    "description_placeholder": "صف عقارك ومميزاته وما يجعله مميزاً...",
+                    "characters": "أحرف"
+                },
+                "location": {
+                    "title": "الموقع",
+                    "wilaya": "الولاية",
+                    "commune": "البلدية",
+                    "select_wilaya": "اختر الولاية",
+                    "select_commune": "اختر البلدية",
+                    "address": "العنوان",
+                    "address_placeholder": "عنوان الشارع، المبنى، الطابق...",
+                    "latitude": "خط العرض",
+                    "longitude": "خط الطول",
+                    "optional": "اختياري",
+                    "use_location": "استخدم موقعي الحالي"
+                },
+                "details": {
+                    "title": "تفاصيل العقار",
+                    "surface_area": "المساحة (م²)",
+                    "bedrooms": "غرف النوم",
+                    "bathrooms": "حمامات",
+                    "rooms": "غرف",
+                    "max_guests": "الحد الأقصى للضيوف",
+                    "select_guests": "اختر الحد الأقصى للضيوف",
+                    "price_per_night": "السعر لكل ليلة"
+                },
+                "amenities": {
+                    "title": "المرافق",
+                    "subtitle": "اختر المرافق المتوفرة في عقارك",
+                    "selected": "مرافق محددة"
+                },
+                "photos": {
+                    "title": "الصور",
+                    "subtitle": "أضف صورة واحدة على الأقل لعرض عقارك. الصورة الأولى ستكون الصورة الأساسية.",
+                    "upload": "انقر للرفع أو اسحب وأفلت",
+                    "max_files": "PNG، JPG حتى 5 ميجابايت (حد أقصى {max} صور)",
+                    "max_reached": "تم الوصول إلى الحد الأقصى من الصور",
+                    "no_images": "لم يتم رفع صور",
+                    "no_images_hint": "أضف صورة واحدة على الأقل لعرض عقارك",
+                    "primary": "أساسية",
+                    "set_primary": "تعيين كأساسية",
+                    "delete_image": "حذف",
+                    "uploading": "جارٍ الرفع...",
+                    "images_count": "{count} / {max} صور"
+                },
+                "buttons": {
+                    "previous": "السابق",
+                    "next_step": "الخطوة التالية",
+                    "create": "إنشاء العقار",
+                    "creating": "جارٍ الإنشاء...",
+                    "save": "حفظ",
+                    "saving": "جارٍ الحفظ..."
+                }
+            },
+            "photos_page": {
+                "title": "صور العقار",
+                "upload_manage": "رفع وإدارة الصور",
+                "tips": {
+                    "title": "نصائح التصوير",
+                    "lighting": "استخدم إضاءة ساطعة وطبيعية",
+                    "show_rooms": "اعرض جميع الغرف الرئيسية",
+                    "exterior": "قم بتضمين الخارج والمناظر",
+                    "cover": "الصورة الأولى ستصبح صورة الغلاف",
+                    "size": "الحجم الموصى به: 1920×1080 بكسل"
+                },
+                "stats": {
+                    "total": "إجمالي الصور",
+                    "primary": "الصورة الأساسية"
+                },
+                "actions": {
+                    "manage_availability": "إدارة التوفر",
+                    "preview": "معاينة القائمة",
+                    "back": "العودة للعقارات"
+                }
+            },
+            "availability_page": {
+                "title": "تقويم التوفر",
+                "stats": {
+                    "total_days": "إجمالي الأيام",
+                    "available": "متاح",
+                    "unavailable": "غير متاح",
+                    "booked": "محجوز"
+                },
+                "calendar": {
+                    "loading": "جارٍ تحميل التوفر...",
+                    "how_to_use": "كيفية الاستخدام:",
+                    "instructions": {
+                        "select": "انقر على يوم لبدء التحديد، ثم انقر على يوم آخر لتحديد نطاق",
+                        "mode": "النقرة الأولى تحدد الوضع (تعيين متاح أو غير متاح)",
+                        "toggle": "انقر على التواريخ غير المتاحة لجعلها متاحة",
+                        "toggle_available": "انقر على التواريخ المتاحة لجعلها غير متاحة"
+                    },
+                    "legend": {
+                        "unavailable": "غير متاح",
+                        "available": "متاح",
+                        "booked": "محجوز",
+                        "selected": "محدد"
+                    }
+                },
+                "actions": {
+                    "manage_photos": "إدارة الصور",
+                    "edit_details": "تعديل التفاصيل",
+                    "view_bookings": "عرض الحجوزات",
+                    "all_properties": "جميع العقارات"
+                }
+            }
+        }
+    },
+    "admin": {
+        "dashboard": {
+            "title": "لوحة تحكم الإدارة",
+            "subtitle": "راقب وأدر منصتك.",
+            "total_users": "إجمالي المستخدمين",
+            "manage_users": "إدارة المستخدمين",
+            "pending_verifications": "عمليات التحقق المعلقة",
+            "recent_activity": "النشاط الأخير",
+            "pending_payments": "المدفوعات المعلقة",
+            "all_caught_up": "كل شيء محدث!"
+        }
+    },
+    "common": {
+        "view_all": "عرض الكل",
+        "loading": "جارٍ التحميل...",
+        "save": "حفظ",
+        "cancel": "إلغاء",
+        "delete": "حذف",
+        "edit": "تعديل",
+        "confirm": "تأكيد",
+        "close": "إغلاق",
+        "back": "رجوع",
+        "next": "التالي",
+        "previous": "السابق",
+        "required": "مطلوب",
+        "today": "اليوم",
+        "yesterday": "أمس",
+        "days_ago": "قبل {count} أيام",
+        "weeks_ago": "قبل {count} أسابيع",
+        "months_ago": "قبل {count} أشهر",
+        "years_ago": "قبل {count} سنوات",
+        "nights": "ليالي",
+        "night": "ليلة",
+        "total": "الإجمالي",
+        "cleaning_fee": "رسوم التنظيف",
+        "service_fee": "رسوم الخدمة",
+        "yes": "نعم",
+        "no": "لا",
+        "any": "الكل",
+        "or": "أو"
+    }
+}

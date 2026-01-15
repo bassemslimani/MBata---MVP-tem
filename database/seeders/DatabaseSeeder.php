@@ -15,6 +15,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // Seed localization data
+        $this->call([
+            WilayaSeeder::class,
+            CommuneSeeder::class,
+        ]);
+
+        // Seed property reference data
+        $this->call([
+            PropertyTypeSeeder::class,
+            PropertyCategorySeeder::class,
+            AmenitySeeder::class,
+        ]);
+
         // User::factory(10)->create();
 
         User::factory()->create([

@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+
+class Amenity extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'name_fr',
+        'name_ar',
+        'name_en',
+        'icon',
+        'is_active',
+    ];
+
+    protected function casts(): array
+    {
+        return [
+            'is_active' => 'boolean',
+        ];
+    }
+
+    public function properties(): BelongsToMany
+    {
+        return $this->belongsToMany(Property::class);
+    }
+}

@@ -1,0 +1,74 @@
+<?php
+
+namespace App\Http\Controllers\Api\Client;
+
+use App\Http\Controllers\Controller;
+use App\Http\Resources\FavoriteResource;
+use App\Models\Favorite;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+
+class FavoriteController extends Controller
+{
+    /**
+     * List user's favorites.
+     */
+    public function index(Request $request): JsonResponse
+    {
+        $favorites = $request->user()
+            ->favorites()
+            ->with(['property.primaryImage', 'property.wilaya', 'property.visibleReviews'])
+            ->latest()
+            ->paginate(20);
+
+        return response()->json([
+            'success' => true,
+            'data' => FavoriteResource::collection($favorites),
+            'meta' => [
+                'current_page' => $favorites->currentPage(),
+                'last_page' => $favorites->lastPage(),
+                'per_page' => $favorites->perPage(),
+                'total' => $favorites->total(),
+            ],
+        ]);
+    }
+
+    /**
+     * Add property to favorites.
+     */
+    public function store(Request $request): JsonResponse
+    {
+        $request->validate([
+            'property_id' => ['required', 'exists:properties,id'],
+        ]);
+
+        $favorite = $request->user()->favorites()->firstOrCreate([
+            'property_id' => $request->input('property_id'),
+        ]);
+
+        return response()->json([
+            'success' => true,
+            'message' => $favorite->wasRecentlyCreated
+                ? 'Added to favorites.'
+                : 'Already in favorites.',
+            'data' => FavoriteResource::make($favorite->load('property.primaryImage')),
+        ], $favorite->wasRecentlyCreated ? 201 : 200);
+    }
+
+    /**
+     * Remove from favorites.
+     */
+    public function destroy(Request $request, string $id): JsonResponse
+    {
+        $favorite = $request->user()
+            ->favorites()
+            ->findOrFail($id);
+
+        $favorite->delete();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Removed from favorites.',
+        ]);
+    }
+}
