@@ -1,6 +1,13 @@
 <?php
 
+use App\Http\Controllers\Api\Admin\AdminDashboardController;
+use App\Http\Controllers\Api\Admin\AdminPropertyController;
+use App\Http\Controllers\Api\Admin\AdminReservationController;
+use App\Http\Controllers\Api\Admin\AdminReviewController;
+use App\Http\Controllers\Api\Admin\AdminUserController;
+use App\Http\Controllers\Api\Admin\SuperAdminController;
 use App\Http\Controllers\Api\AmenityController;
+use App\Http\Controllers\Api\Client\DashboardController;
 use App\Http\Controllers\Api\CurrencyController;
 use App\Http\Controllers\Api\Client\FavoriteController;
 use App\Http\Controllers\Api\Client\ReservationController;
@@ -44,6 +51,9 @@ Route::prefix('v1')->group(function () {
 
     // Client endpoints (authentication required)
     Route::middleware('auth:sanctum')->prefix('client')->group(function () {
+        // Dashboard
+        Route::get('/dashboard', [DashboardController::class, 'index']);
+
         // Reservations
         Route::get('/reservations', [ReservationController::class, 'index']);
         Route::post('/reservations', [ReservationController::class, 'store']);
@@ -82,5 +92,40 @@ Route::prefix('v1')->group(function () {
         Route::put('/properties/{propertyId}/availabilities/{id}', [AvailabilityController::class, 'update']);
         Route::patch('/properties/{propertyId}/availabilities/{id}', [AvailabilityController::class, 'update']);
         Route::delete('/properties/{propertyId}/availabilities/{id}', [AvailabilityController::class, 'destroy']);
+    });
+
+    // Admin endpoints (authentication + admin role required)
+    Route::middleware(['auth:sanctum', 'isAdmin'])->prefix('admin')->group(function () {
+        // Dashboard
+        Route::get('/dashboard', [AdminDashboardController::class, 'index']);
+
+        // Users management
+        Route::get('/users', [AdminUserController::class, 'index']);
+        Route::get('/users/{id}', [AdminUserController::class, 'show']);
+        Route::post('/users/{id}/toggle-status', [AdminUserController::class, 'toggleStatus']);
+        Route::delete('/users/{id}', [AdminUserController::class, 'destroy']);
+
+        // Properties management
+        Route::get('/properties', [AdminPropertyController::class, 'index']);
+        Route::get('/properties/{id}', [AdminPropertyController::class, 'show']);
+        Route::post('/properties/{id}/verify', [AdminPropertyController::class, 'verify']);
+        Route::delete('/properties/{id}', [AdminPropertyController::class, 'destroy']);
+
+        // Reservations management
+        Route::get('/reservations', [AdminReservationController::class, 'index']);
+        Route::get('/reservations/{id}', [AdminReservationController::class, 'show']);
+
+        // Reviews management
+        Route::get('/reviews', [AdminReviewController::class, 'index']);
+        Route::get('/reviews/{id}', [AdminReviewController::class, 'show']);
+        Route::post('/reviews/{id}/toggle-visibility', [AdminReviewController::class, 'toggleVisibility']);
+        Route::delete('/reviews/{id}', [AdminReviewController::class, 'destroy']);
+    });
+
+    // Super Admin endpoints (super_admin role only)
+    Route::middleware(['auth:sanctum'])->prefix('super-admin')->group(function () {
+        Route::get('/admins', [SuperAdminController::class, 'indexAdmins']);
+        Route::post('/admins', [SuperAdminController::class, 'storeAdmin']);
+        Route::delete('/admins/{id}', [SuperAdminController::class, 'destroyAdmin']);
     });
 });

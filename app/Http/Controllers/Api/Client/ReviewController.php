@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\Client;
 
 use App\Http\Controllers\Controller;
+use App\Http\Traits\ApiResponder;
 use App\Http\Requests\StoreReviewRequest;
 use App\Http\Resources\ReviewResource;
 use App\Models\Property;
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\DB;
 
 class ReviewController extends Controller
 {
+    use ApiResponder;
+
     /**
      * Submit a review.
      */
@@ -26,26 +29,29 @@ class ReviewController extends Controller
 
             // Check if reservation belongs to the property
             if ($reservation->property_id != $request->input('property_id')) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'Reservation does not match the property.',
-                ], 400);
+                return $this->errorResponse(
+                    'reservation_not_found',
+                    400,
+                    $request->header('Accept-Language')
+                );
             }
 
             // Check if reservation is completed
             if (!$reservation->isCompleted()) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'You can only review completed stays.',
-                ], 400);
+                return $this->errorResponse(
+                    'review_completed_stay_only',
+                    400,
+                    $request->header('Accept-Language')
+                );
             }
 
             // Check if review already exists
             if ($reservation->review) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'You have already reviewed this reservation.',
-                ], 400);
+                return $this->errorResponse(
+                    'review_already_exists',
+                    400,
+                    $request->header('Accept-Language')
+                );
             }
 
             DB::beginTransaction();
@@ -61,19 +67,20 @@ class ReviewController extends Controller
 
             DB::commit();
 
-            return response()->json([
-                'success' => true,
-                'message' => 'Review submitted successfully.',
-                'data' => ReviewResource::make($review->load('user')),
-            ], 201);
+            return $this->successResponse(
+                'review_submitted',
+                ReviewResource::make($review->load('user')),
+                201,
+                $request->header('Accept-Language')
+            );
         } catch (\Exception $e) {
             DB::rollBack();
 
-            return response()->json([
-                'success' => false,
-                'message' => 'Failed to submit review.',
-                'error' => $e->getMessage(),
-            ], 500);
+            return $this->errorResponse(
+                'save_failed',
+                500,
+                $request->header('Accept-Language')
+            );
         }
     }
 

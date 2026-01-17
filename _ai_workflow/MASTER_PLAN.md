@@ -1,6 +1,6 @@
 # Mbata V2 MVP - Master Plan
-**Last Updated:** 2025-01-15
-**Status:** Sprint 3 - Search & Booking (Client Backend Complete)
+**Last Updated:** 2025-01-16
+**Status:** Sprint 8 - Payment System
 
 ---
 
@@ -137,17 +137,21 @@
 | ID | Page/Component | Route | Description | Status |
 |----|----------------|-------|-------------|--------|
 | 3.3.1 | `Pages/Search.vue` | /search | Property search with filters | [DONE] |
-| 3.3.2 | `Pages/Property/Show.vue` | /properties/{id} | Property detail page | [TODO] |
-| 3.3.3 | `Pages/Property/Booking.vue` | /properties/{id}/book | Booking form & payment | [TODO] |
-| 3.3.4 | `Pages/Client/Dashboard.vue` | /client/dashboard | Client dashboard | [TODO] |
-| 3.3.5 | `Pages/Client/Reservations/Index.vue` | /client/reservations | My reservations list | [TODO] |
-| 3.3.6 | `Pages/Client/Reservations/Show.vue` | /client/reservations/{id} | Reservation details | [TODO] |
-| 3.3.7 | `Pages/Client/Favorites.vue` | /client/favorites | Saved properties | [TODO] |
-| 3.3.8 | `Pages/Client/Profile.vue` | /client/profile | Profile settings | [TODO] |
-| 3.3.9 | `Components/Property/SearchFilters.vue` | - | Search filter sidebar | [TODO] |
-| 3.3.10 | `Components/Property/PropertyGrid.vue` | - | Grid of property cards | [TODO] |
-| 3.3.11 | `Components/Booking/DateRangePicker.vue` | - | Check-in/out date picker | [TODO] |
-| 3.3.12 | `Components/Booking/PriceSummary.vue` | - | Booking price breakdown | [TODO] |
+| 3.3.2 | `Pages/Property/Show.vue` | /properties/{id} | Property detail page | [DONE] |
+| 3.3.3 | `Pages/Property/Booking.vue` | /properties/{id}/book | Booking form & payment | [DONE] |
+| 3.3.4 | `Pages/Client/Dashboard.vue` | /client/dashboard | Client dashboard | [DONE] |
+| 3.3.5 | `Pages/Client/Reservations/Index.vue` | /client/reservations | My reservations list | [DONE] |
+| 3.3.6 | `Pages/Client/Reservations/Show.vue` | /client/reservations/{id} | Reservation details | [DONE] |
+| 3.3.7 | `Pages/Client/Favorites.vue` | /client/favorites | Saved properties | [DONE] |
+| 3.3.8 | `Pages/Client/Profile.vue` | /client/profile | Profile settings | [DONE] |
+| 3.3.9 | `Components/Booking/BookingWidget.vue` | - | Booking widget with dates/guests | [DONE] |
+| 3.3.10 | `Components/Booking/DateRangePicker.vue` | - | Check-in/out date picker | [DONE] |
+| 3.3.11 | `Components/Booking/GuestSelector.vue` | - | Guest count selector | [DONE] |
+| 3.3.12 | `Components/Booking/PriceSummary.vue` | - | Booking price breakdown | [DONE] |
+| 3.3.13 | `Components/Property/PropertyGallery.vue` | - | Image gallery with lightbox | [DONE] |
+| 3.3.14 | `Components/Property/AmenitiesList.vue` | - | Amenity icons with labels | [DONE] |
+| 3.3.15 | `Components/Review/ReviewCard.vue` | - | Review display with rating | [DONE] |
+| 3.3.16 | `Components/Review/ReviewForm.vue` | - | Review submission form | [DONE] |
 
 ---
 
@@ -192,37 +196,37 @@
 
 | ID | Table | Columns | Relationships | Status |
 |----|-------|---------|---------------|--------|
-| 5.1.1 | `admin_actions` | id, admin_id, action_type, entity_type, entity_id, old_values, new_values, ip_address, user_agent | BelongsTo: admin (user) | [TODO] |
+| 5.1.1 | `admin_actions` | id, admin_id, action_type, entity_type, entity_id, old_values, new_values, ip_address, user_agent | BelongsTo: admin (user) | [DONE] |
 
 ### 5.2 Backend API - Admin
 
 | ID | Endpoint | Method | Controller | Description | Status |
 |----|----------|--------|------------|-------------|--------|
-| 5.2.1 | `/api/admin/dashboard` | GET | AdminDashboardController | Dashboard stats | [TODO] |
-| 5.2.2 | `/api/admin/users` | GET | AdminUserController | List all users | [TODO] |
-| 5.2.3 | `/api/admin/users/{id}` | GET | AdminUserController | User details | [TODO] |
-| 5.2.4 | `/api/admin/users/{id}/toggle-status` | POST | AdminUserController | Activate/suspend user | [TODO] |
-| 5.2.5 | `/api/admin/properties` | GET | AdminPropertyController | List all properties | [TODO] |
-| 5.2.6 | `/api/admin/properties/{id}/verify` | POST | AdminPropertyController | Verify property | [TODO] |
-| 5.2.7 | `/api/admin/properties/{id}` | DELETE | AdminPropertyController | Delete property | [TODO] |
-| 5.2.8 | `/api/admin/reservations` | GET | AdminReservationController | List all reservations | [TODO] |
-| 5.2.9 | `/api/admin/reviews` | GET | AdminReviewController | Moderate reviews | [TODO] |
-| 5.2.10 | `/api/admin/reviews/{id}/toggle-visibility` | POST | AdminReviewController | Show/hide review | [TODO] |
-| 5.2.11 | `/api/super-admin/admins` | GET | SuperAdminController | Manage admins | [TODO] |
-| 5.2.12 | `/api/super-admin/admins` | POST | SuperAdminController | Create admin | [TODO] |
-| 5.2.13 | `/api/super-admin/admins/{id}` | DELETE | SuperAdminController | Remove admin | [TODO] |
+| 5.2.1 | `/api/admin/dashboard` | GET | AdminDashboardController | Dashboard stats | [DONE] |
+| 5.2.2 | `/api/admin/users` | GET | AdminUserController | List all users | [DONE] |
+| 5.2.3 | `/api/admin/users/{id}` | GET | AdminUserController | User details | [DONE] |
+| 5.2.4 | `/api/admin/users/{id}/toggle-status` | POST | AdminUserController | Activate/suspend user | [DONE] |
+| 5.2.5 | `/api/admin/properties` | GET | AdminPropertyController | List all properties | [DONE] |
+| 5.2.6 | `/api/admin/properties/{id}/verify` | POST | AdminPropertyController | Verify property | [DONE] |
+| 5.2.7 | `/api/admin/properties/{id}` | DELETE | AdminPropertyController | Delete property | [DONE] |
+| 5.2.8 | `/api/admin/reservations` | GET | AdminReservationController | List all reservations | [DONE] |
+| 5.2.9 | `/api/admin/reviews` | GET | AdminReviewController | Moderate reviews | [DONE] |
+| 5.2.10 | `/api/admin/reviews/{id}/toggle-visibility` | POST | AdminReviewController | Show/hide review | [DONE] |
+| 5.2.11 | `/api/super-admin/admins` | GET | SuperAdminController | Manage admins | [DONE] |
+| 5.2.12 | `/api/super-admin/admins` | POST | SuperAdminController | Create admin | [DONE] |
+| 5.2.13 | `/api/super-admin/admins/{id}` | DELETE | SuperAdminController | Remove admin | [DONE] |
 
 ### 5.3 Frontend Pages - Admin
 
 | ID | Page/Component | Route | Description | Status |
 |----|----------------|-------|-------------|--------|
 | 5.3.1 | `Pages/Admin/Dashboard.vue` | /admin/dashboard | Admin dashboard with stats | [DONE] |
-| 5.3.2 | `Pages/Admin/Users/Index.vue` | /admin/users | User management | [TODO] |
-| 5.3.3 | `Pages/Admin/Properties/Index.vue` | /admin/properties | Property moderation | [TODO] |
-| 5.3.4 | `Pages/Admin/Reservations/Index.vue` | /admin/reservations | All reservations | [TODO] |
-| 5.3.5 | `Pages/Admin/Reviews/Index.vue` | /admin/reviews | Review moderation | [TODO] |
-| 5.3.6 | `Pages/Admin/Settings/Currency.vue` | /admin/settings/currency | Exchange rate settings | [TODO] |
-| 5.3.7 | `Pages/SuperAdmin/Admins/Index.vue` | /super-admin/admins | Admin management | [TODO] |
+| 5.3.2 | `Pages/Admin/Users.vue` | /admin/users | User management | [DONE] |
+| 5.3.3 | `Pages/Admin/Properties.vue` | /admin/properties | Property moderation | [DONE] |
+| 5.3.4 | `Pages/Admin/Reservations.vue` | /admin/reservations | All reservations | [DONE] |
+| 5.3.5 | `Pages/Admin/Reviews.vue` | /admin/reviews | Review moderation | [DONE] |
+| 5.3.6 | `Pages/Admin/Settings/Currency.vue` | /admin/settings/currency | Exchange rate settings | [DONE] |
+| 5.3.7 | `Pages/SuperAdmin/Admins.vue` | /super-admin/admins | Admin management | [DONE] |
 
 ---
 
@@ -292,11 +296,14 @@
 |--------|-------|---------|----------|-----|--------|
 | 1 | Foundation & Localization | 3/10 | 7/7 | - | [DONE] |
 | 2 | Properties (Owner) | 20/20 | 12/13 | - | [DONE] |
-| 3 | Search & Booking (Client) | 12/12 | 1/12 | - | [IN PROGRESS] |
-| 4 | Payments | 0/8 | 0/7 | - | [TODO] |
-| 5 | Administration | 0/13 | 1/7 | - | [TODO] |
-| 6 | Real Estate Promotions | 0/8 | 0/5 | - | [TODO] |
-| 7 | Multilingual & PWA | 0/3 | 4/8 | - | [TODO] |
+| 3 | Search & Booking (Client) | 12/12 | 16/16 | - | [DONE] |
+| 4 | Client Experience Frontend | 1/1 | 16/16 | - | [DONE] |
+| 5 | Web Controllers Integration | 7/7 | - | - | [DONE] |
+| 6 | Administration Backend | 13/13 | - | - | [DONE] |
+| 7 | Administration Frontend | 7/7 | 7/7 | - | [DONE] |
+| 8 | Payment System | 0/8 | 0/7 | - | [STARTING] |
+| 9 | Real Estate Promotions | 0/8 | 0/5 | - | [TODO] |
+| 10 | Multilingual & PWA | 0/3 | 4/8 | - | [TODO] |
 
 ---
 

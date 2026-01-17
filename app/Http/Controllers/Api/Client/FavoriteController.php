@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\Client;
 
 use App\Http\Controllers\Controller;
+use App\Http\Traits\ApiResponder;
 use App\Http\Resources\FavoriteResource;
 use App\Models\Favorite;
 use Illuminate\Http\JsonResponse;
@@ -10,6 +11,8 @@ use Illuminate\Http\Request;
 
 class FavoriteController extends Controller
 {
+    use ApiResponder;
+
     /**
      * List user's favorites.
      */
@@ -46,13 +49,16 @@ class FavoriteController extends Controller
             'property_id' => $request->input('property_id'),
         ]);
 
-        return response()->json([
-            'success' => true,
-            'message' => $favorite->wasRecentlyCreated
-                ? 'Added to favorites.'
-                : 'Already in favorites.',
-            'data' => FavoriteResource::make($favorite->load('property.primaryImage')),
-        ], $favorite->wasRecentlyCreated ? 201 : 200);
+        $messageKey = $favorite->wasRecentlyCreated
+            ? 'added_to_favorites'
+            : 'already_in_favorites';
+
+        return $this->successResponse(
+            $messageKey,
+            FavoriteResource::make($favorite->load('property.primaryImage')),
+            $favorite->wasRecentlyCreated ? 201 : 200,
+            $request->header('Accept-Language')
+        );
     }
 
     /**
@@ -66,9 +72,11 @@ class FavoriteController extends Controller
 
         $favorite->delete();
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Removed from favorites.',
-        ]);
+        return $this->successResponse(
+            'removed_from_favorites',
+            null,
+            200,
+            $request->header('Accept-Language')
+        );
     }
 }

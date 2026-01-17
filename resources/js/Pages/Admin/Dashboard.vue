@@ -1,5 +1,6 @@
 <script setup>
 import { Link } from '@inertiajs/vue3'
+import { ref, onMounted } from 'vue'
 import AdminLayout from '@/Layouts/AdminLayout.vue'
 
 const props = defineProps({
@@ -25,7 +26,10 @@ const props = defineProps({
     },
 })
 
+const loading = ref(false)
+
 const formatCurrency = (amount) => {
+    if (!amount) return '0 DA'
     return new Intl.NumberFormat('fr-DZ').format(amount) + ' DA'
 }
 
@@ -56,18 +60,9 @@ const getActivityColor = (type) => {
     <AdminLayout>
         <div class="mb-8 flex items-center justify-between">
             <div>
-                <h1 class="text-2xl font-bold text-gray-900">Admin Dashboard</h1>
-                <p class="text-gray-600 mt-1">Monitor and manage your platform.</p>
+                <h1 class="text-2xl font-bold text-gray-900">{{ $t('admin.dashboard.title') }}</h1>
+                <p class="text-gray-600 mt-1">{{ $t('admin.dashboard.subtitle') }}</p>
             </div>
-            <Link
-                href="/admin/reports"
-                class="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50"
-            >
-                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                View Reports
-            </Link>
         </div>
 
         <!-- Stats Grid -->
@@ -76,7 +71,7 @@ const getActivityColor = (type) => {
             <div class="bg-white rounded-xl shadow-sm p-6">
                 <div class="flex items-center justify-between">
                     <div>
-                        <p class="text-sm font-medium text-gray-600">Total Users</p>
+                        <p class="text-sm font-medium text-gray-600">{{ $t('admin.dashboard.total_users') }}</p>
                         <p class="text-3xl font-bold text-gray-900 mt-2">{{ stats.totalUsers }}</p>
                     </div>
                     <div class="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center">
@@ -86,8 +81,8 @@ const getActivityColor = (type) => {
                     </div>
                 </div>
                 <div class="mt-4">
-                    <Link href="/admin/users" class="text-sm text-indigo-600 hover:text-indigo-700 font-medium">
-                        Manage users &rarr;
+                    <Link :href="route('admin.users')" class="text-sm text-orange-600 hover:text-orange-700 font-medium">
+                        {{ $t('admin.dashboard.manage_users') }} &rarr;
                     </Link>
                 </div>
             </div>
@@ -96,7 +91,7 @@ const getActivityColor = (type) => {
             <div class="bg-white rounded-xl shadow-sm p-6">
                 <div class="flex items-center justify-between">
                     <div>
-                        <p class="text-sm font-medium text-gray-600">Total Properties</p>
+                        <p class="text-sm font-medium text-gray-600">{{ $t('owner.dashboard.total_properties') }}</p>
                         <p class="text-3xl font-bold text-gray-900 mt-2">{{ stats.totalProperties }}</p>
                     </div>
                     <div class="h-12 w-12 bg-indigo-100 rounded-lg flex items-center justify-center">
@@ -106,8 +101,8 @@ const getActivityColor = (type) => {
                     </div>
                 </div>
                 <div class="mt-4 flex items-center text-sm">
-                    <span class="text-orange-600 font-medium">{{ stats.pendingProperties }} pending</span>
-                    <span class="text-gray-400 ml-2">verification</span>
+                    <span class="text-orange-600 font-medium">{{ stats.pendingProperties }}</span>
+                    <span class="text-gray-400 ml-2">{{ $t('admin.dashboard.pending_verifications') }}</span>
                 </div>
             </div>
 
@@ -115,7 +110,7 @@ const getActivityColor = (type) => {
             <div class="bg-white rounded-xl shadow-sm p-6">
                 <div class="flex items-center justify-between">
                     <div>
-                        <p class="text-sm font-medium text-gray-600">Total Reservations</p>
+                        <p class="text-sm font-medium text-gray-600">{{ $t('owner.dashboard.total_reservations') }}</p>
                         <p class="text-3xl font-bold text-gray-900 mt-2">{{ stats.totalReservations }}</p>
                     </div>
                     <div class="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center">
@@ -125,8 +120,8 @@ const getActivityColor = (type) => {
                     </div>
                 </div>
                 <div class="mt-4">
-                    <Link href="/admin/reservations" class="text-sm text-indigo-600 hover:text-indigo-700 font-medium">
-                        View all &rarr;
+                    <Link :href="route('admin.reservations')" class="text-sm text-orange-600 hover:text-orange-700 font-medium">
+                        {{ $t('common.view_all') }} &rarr;
                     </Link>
                 </div>
             </div>
@@ -135,7 +130,7 @@ const getActivityColor = (type) => {
             <div class="bg-white rounded-xl shadow-sm p-6">
                 <div class="flex items-center justify-between">
                     <div>
-                        <p class="text-sm font-medium text-gray-600">Total Revenue</p>
+                        <p class="text-sm font-medium text-gray-600">{{ $t('owner.dashboard.total_earnings') }}</p>
                         <p class="text-3xl font-bold text-gray-900 mt-2">{{ formatCurrency(stats.totalRevenue) }}</p>
                     </div>
                     <div class="h-12 w-12 bg-yellow-100 rounded-lg flex items-center justify-center">
@@ -146,7 +141,7 @@ const getActivityColor = (type) => {
                 </div>
                 <div class="mt-4 flex items-center text-sm">
                     <span class="text-green-600 font-medium">{{ formatCurrency(stats.currentMonthRevenue) }}</span>
-                    <span class="text-gray-400 ml-2">this month</span>
+                    <span class="text-gray-400 ml-2">{{ $t('owner.dashboard.this_month') }}</span>
                 </div>
             </div>
         </div>
@@ -156,13 +151,13 @@ const getActivityColor = (type) => {
             <div class="bg-white rounded-xl shadow-sm">
                 <div class="p-6 border-b border-gray-200">
                     <div class="flex items-center justify-between">
-                        <h2 class="text-lg font-semibold text-gray-900">Pending Verifications</h2>
+                        <h2 class="text-lg font-semibold text-gray-900">{{ $t('admin.dashboard.pending_verifications') }}</h2>
                         <Link
                             v-if="pendingVerifications.length > 0"
-                            href="/admin/properties"
-                            class="text-sm text-indigo-600 hover:text-indigo-700 font-medium"
+                            :href="route('admin.properties')"
+                            class="text-sm text-orange-600 hover:text-orange-700 font-medium"
                         >
-                            View all
+                            {{ $t('common.view_all') }}
                         </Link>
                     </div>
                 </div>
@@ -177,27 +172,33 @@ const getActivityColor = (type) => {
                             <div class="flex items-start gap-4">
                                 <div class="h-14 w-14 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
                                     <img
-                                        v-if="property.images?.[0]"
-                                        :src="property.images[0].image_path"
+                                        v-if="property.thumbnail_url"
+                                        :src="property.thumbnail_url"
                                         class="h-full w-full object-cover"
+                                        alt=""
                                     />
+                                    <div v-else class="h-full w-full flex items-center justify-center bg-gray-200">
+                                        <svg class="h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                        </svg>
+                                    </div>
                                 </div>
                                 <div>
                                     <h3 class="font-medium text-gray-900">{{ property.title }}</h3>
                                     <p class="text-sm text-gray-600 mt-1">
-                                        {{ property.wilaya?.name }}, {{ property.commune?.name }}
+                                        {{ property.wilaya }}<span v-if="property.commune">, {{ property.commune }}</span>
                                     </p>
                                     <p class="text-sm text-gray-500 mt-1">
-                                        By {{ property.owner?.name }}
+                                        {{ $t('owner.properties.form.basic.property_type') }}: {{ property.owner?.name || '-' }}
                                     </p>
                                 </div>
                             </div>
                             <div class="flex items-center gap-2">
                                 <Link
-                                    :href="`/admin/properties/${property.id}`"
-                                    class="text-sm text-indigo-600 hover:text-indigo-700 font-medium"
+                                    :href="route('admin.properties.show', property.id)"
+                                    class="text-sm text-orange-600 hover:text-orange-700 font-medium"
                                 >
-                                    Review
+                                    {{ $t('admin.shared.actions.view') }}
                                 </Link>
                             </div>
                         </div>
@@ -208,8 +209,8 @@ const getActivityColor = (type) => {
                     <svg class="mx-auto h-16 w-16 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <h3 class="mt-4 text-lg font-medium text-gray-900">All caught up!</h3>
-                    <p class="mt-2 text-gray-500">No properties pending verification.</p>
+                    <h3 class="mt-4 text-lg font-medium text-gray-900">{{ $t('admin.dashboard.all_caught_up') }}</h3>
+                    <p class="mt-2 text-gray-500">{{ $t('admin.properties.empty_subtitle') }}</p>
                 </div>
             </div>
 
@@ -217,14 +218,7 @@ const getActivityColor = (type) => {
             <div class="bg-white rounded-xl shadow-sm">
                 <div class="p-6 border-b border-gray-200">
                     <div class="flex items-center justify-between">
-                        <h2 class="text-lg font-semibold text-gray-900">Recent Activity</h2>
-                        <Link
-                            v-if="recentActivities.length > 0"
-                            href="/admin/activity"
-                            class="text-sm text-indigo-600 hover:text-indigo-700 font-medium"
-                        >
-                            View all
-                        </Link>
+                        <h2 class="text-lg font-semibold text-gray-900">{{ $t('admin.dashboard.recent_activity') }}</h2>
                     </div>
                 </div>
 
@@ -252,8 +246,8 @@ const getActivityColor = (type) => {
                     <svg class="mx-auto h-16 w-16 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <h3 class="mt-4 text-lg font-medium text-gray-900">No recent activity</h3>
-                    <p class="mt-2 text-gray-500">Recent activities will appear here.</p>
+                    <h3 class="mt-4 text-lg font-medium text-gray-900">{{ $t('admin.shared.empty_states.no_results') }}</h3>
+                    <p class="mt-2 text-gray-500">{{ $t('admin.dashboard.recent_activity') }}</p>
                 </div>
             </div>
         </div>
@@ -268,12 +262,12 @@ const getActivityColor = (type) => {
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-900">{{ stats.pendingPayments }} Pending Payments</h3>
+                        <h3 class="text-lg font-semibold text-gray-900">{{ stats.pendingPayments }} {{ $t('admin.dashboard.pending_payments') }}</h3>
                         <p class="text-gray-600 mt-1">Payment verifications awaiting your review.</p>
                     </div>
                 </div>
                 <Link
-                    href="/admin/payments"
+                    :href="route('admin.reservations')"
                     class="inline-flex items-center gap-2 px-4 py-2 bg-orange-600 text-white rounded-lg font-medium hover:bg-orange-700 transition-colors"
                 >
                     Review Payments

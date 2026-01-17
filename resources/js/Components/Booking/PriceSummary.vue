@@ -30,7 +30,7 @@ const props = defineProps({
         type: Boolean,
         default: false,
     },
-}
+})
 
 const formatCurrency = (amount) => {
     return new Intl.NumberFormat('fr-DZ').format(amount) + ' ' + props.currency

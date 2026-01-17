@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\Client;
 
 use App\Http\Controllers\Controller;
+use App\Http\Traits\ApiResponder;
 use App\Http\Resources\ReservationResource;
 use App\Http\Requests\StoreReservationRequest;
 use App\Models\Property;
@@ -14,6 +15,7 @@ use Illuminate\Support\Facades\DB;
 
 class ReservationController extends Controller
 {
+    use ApiResponder;
     /**
      * List client's reservations.
      */
@@ -50,10 +52,11 @@ class ReservationController extends Controller
 
             // Validate max guests
             if ($guestsCount > $property->max_guests) {
-                return response()->json([
-                    'success' => false,
-                    'message' => "Property can only accommodate {$property->max_guests} guests.",
-                ], 400);
+                return $this->errorResponse(
+                    'property_max_guests',
+                    400,
+                    $request->header('Accept-Language')
+                );
             }
 
             // Check for overlapping reservations
@@ -63,10 +66,11 @@ class ReservationController extends Controller
                 ->count();
 
             if ($overlappingCount > 0) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'Property is not available for the selected dates.',
-                ], 400);
+                return $this->errorResponse(
+                    'property_not_available',
+                    400,
+                    $request->header('Accept-Language')
+                );
             }
 
             DB::beginTransaction();
@@ -112,19 +116,20 @@ class ReservationController extends Controller
 
             DB::commit();
 
-            return response()->json([
-                'success' => true,
-                'message' => 'Reservation created successfully.',
-                'data' => ReservationResource::make($reservation),
-            ], 201);
+            return $this->successResponse(
+                'reservation_created',
+                ReservationResource::make($reservation),
+                201,
+                $request->header('Accept-Language')
+            );
         } catch (\Exception $e) {
             DB::rollBack();
 
-            return response()->json([
-                'success' => false,
-                'message' => 'Failed to create reservation.',
-                'error' => $e->getMessage(),
-            ], 500);
+            return $this->errorResponse(
+                'save_failed',
+                500,
+                $request->header('Accept-Language')
+            );
         }
     }
 
@@ -153,10 +158,11 @@ class ReservationController extends Controller
             $reservation = $request->user()->reservations()->findOrFail($id);
 
             if (!$reservation->canBeCancelled()) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'This reservation cannot be cancelled.',
-                ], 400);
+                return $this->errorResponse(
+                    'reservation_cannot_cancel',
+                    400,
+                    $request->header('Accept-Language')
+                );
             }
 
             $reservation->update([
@@ -164,17 +170,18 @@ class ReservationController extends Controller
                 'cancelled_at' => now(),
             ]);
 
-            return response()->json([
-                'success' => true,
-                'message' => 'Reservation cancelled successfully.',
-                'data' => ReservationResource::make($reservation),
-            ]);
+            return $this->successResponse(
+                'reservation_cancelled',
+                ReservationResource::make($reservation),
+                200,
+                $request->header('Accept-Language')
+            );
         } catch (\Exception $e) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Failed to cancel reservation.',
-                'error' => $e->getMessage(),
-            ], 500);
+            return $this->errorResponse(
+                'action_failed',
+                500,
+                $request->header('Accept-Language')
+            );
         }
     }
 }

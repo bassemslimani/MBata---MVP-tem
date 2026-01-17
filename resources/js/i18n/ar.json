@@ -548,6 +548,270 @@
             "recent_activity": "النشاط الأخير",
             "pending_payments": "المدفوعات المعلقة",
             "all_caught_up": "كل شيء محدث!"
+        },
+        "nav": {
+            "dashboard": "لوحة التحكم",
+            "users": "المستخدمين",
+            "properties": "العقارات",
+            "reservations": "الحجوزات",
+            "reviews": "التقييمات",
+            "payments": "المدفوعات",
+            "admins": "المديرون",
+            "settings": "الإعدادات",
+            "reports": "التقارير",
+            "activity": "سجل النشاط"
+        },
+        "users": {
+            "title": "إدارة المستخدمين",
+            "subtitle": "إدارة جميع مستخدمي المنصة",
+            "add_user": "إضافة مستخدم",
+            "search_placeholder": "بحث بالاسم أو البريد الإلكتروني...",
+            "filter_role": "تصفية حسب الدور",
+            "filter_status": "تصفية حسب الحالة",
+            "table": {
+                "name": "الاسم",
+                "email": "البريد الإلكتروني",
+                "role": "الدور",
+                "status": "الحالة",
+                "properties": "العقارات",
+                "reservations": "الحجوزات",
+                "joined": "تاريخ الانضمام",
+                "actions": "الإجراءات",
+                "view": "عرض",
+                "edit": "تعديل",
+                "delete": "حذف",
+                "suspend": "تعليق",
+                "activate": "تفعيل",
+                "verify": "توثيق"
+            },
+            "roles": {
+                "user": "مستخدم",
+                "owner": "مالك",
+                "admin": "مدير",
+                "super_admin": "سوبر مدير"
+            },
+            "statuses": {
+                "active": "نشط",
+                "suspended": "معلق",
+                "pending": "قيد الانتظار",
+                "inactive": "غير نشط"
+            },
+            "empty": "لم يتم العثور على مستخدمين",
+            "empty_subtitle": "ابدأ بإضافة مستخدم جديد إلى المنصة.",
+            "confirm_delete": "هل أنت متأكد من حذف هذا المستخدم؟",
+            "confirm_suspend": "هل أنت متأكد من تعليق هذا المستخدم؟",
+            "confirm_activate": "هل أنت متأكد من تفعيل هذا المستخدم؟"
+        },
+        "properties": {
+            "title": "إشراف العقارات",
+            "subtitle": "مراجعة وإدارة قوائم العقارات",
+            "search_placeholder": "البحث عن العقارات...",
+            "filter_status": "تصفية حسب الحالة",
+            "filter_type": "تصفية حسب النوع",
+            "table": {
+                "title": "العنوان",
+                "owner": "المالك",
+                "location": "الموقع",
+                "type": "النوع",
+                "price": "السعر/ليلة",
+                "status": "الحالة",
+                "verified": "موثق",
+                "created": "تاريخ الإنشاء",
+                "actions": "الإجراءات",
+                "view": "عرض",
+                "approve": "موافقة",
+                "reject": "رفض",
+                "delete": "حذف"
+            },
+            "statuses": {
+                "pending": "قيد الانتظار",
+                "approved": "موافق عليه",
+                "rejected": "مرفوض",
+                "suspended": "معلق",
+                "active": "نشط",
+                "inactive": "غير نشط"
+            },
+            "empty": "لم يتم العثور على عقارات",
+            "empty_subtitle": "العقارات المعلقة المراجعة ستظهر هنا.",
+            "confirm_approve": "هل أنت متأكد من الموافقة على هذا العقار؟",
+            "confirm_reject": "هل أنت متأكد من رفض هذا العقار؟",
+            "confirm_delete": "هل أنت متأكد من حذف هذا العقار؟"
+        },
+        "reservations": {
+            "title": "جميع الحجوزات",
+            "subtitle": "عرض وإدارة جميع الحجوزات",
+            "search_placeholder": "البحث بالرقم، الضيف، أو العقار...",
+            "filter_status": "تصفية حسب الحالة",
+            "filter_date": "تصفية حسب النطاق الزمني",
+            "table": {
+                "id": "رقم الحجز",
+                "property": "العقار",
+                "guest": "الضيف",
+                "check_in": "تسجيل الوصول",
+                "check_out": "تسجيل المغادرة",
+                "guests": "الضيوف",
+                "total": "الإجمالي",
+                "payment": "الدفع",
+                "status": "الحالة",
+                "actions": "الإجراءات",
+                "view": "عرض التفاصيل",
+                "cancel": "إلغاء"
+            },
+            "statuses": {
+                "pending": "قيد الانتظار",
+                "confirmed": "مؤكد",
+                "completed": "مكتمل",
+                "cancelled": "ملغي"
+            },
+            "empty": "لم يتم العثور على حجوزات",
+            "empty_subtitle": "جميع حجوزات المنصة ستظهر هنا.",
+            "payment_methods": {
+                "card": "بطاقة",
+                "ccp": "CCP",
+                "cash": "الدفع عند الوصول"
+            }
+        },
+        "reviews": {
+            "title": "إشراف التقييمات",
+            "subtitle": "إدارة تقييمات ومراجعات المستخدمين",
+            "search_placeholder": "البحث عن التقييمات...",
+            "filter_rating": "تصفية حسب التقييم",
+            "filter_status": "تصفية حسب الحالة",
+            "table": {
+                "property": "العقار",
+                "user": "المستخدم",
+                "rating": "التقييم",
+                "comment": "التعليق",
+                "created": "التاريخ",
+                "status": "الحالة",
+                "actions": "الإجراءات",
+                "approve": "موافقة",
+                "reject": "رفض",
+                "delete": "حذف"
+            },
+            "statuses": {
+                "pending": "قيد الانتظار",
+                "approved": "موافق عليه",
+                "flagged": "موظل عليه",
+                "hidden": "مخفي"
+            },
+            "empty": "لم يتم العثور على تقييمات",
+            "empty_subtitle": "التقييمات المعلقة المراجعة ستظهر هنا.",
+            "confirm_delete": "هل أنت متأكد من حذف هذا التقييم؟"
+        },
+        "settings": {
+            "title": "إعدادات المنصة",
+            "subtitle": "إدارة تكوين المنصة",
+            "currency": {
+                "title": "أسعار صرف العملات",
+                "subtitle": "إدارة أسعار الصرف لدعم العملات المتعددة",
+                "base_currency": "العملة الأساسية (دج)",
+                "rates": {
+                    "eur": "اليورو (EUR)",
+                    "usd": "الدولار الأمريكي (USD)",
+                    "last_updated": "آخر تحديث: {date}"
+                },
+                "update": "تحديث الأسعار",
+                "auto_update": "تحديث تلقائي يومي",
+                "save": "حفظ الأسعار",
+                "saved": "تم تحديث أسعار الصرف بنجاح!"
+            },
+            "general": {
+                "title": "الإعدادات العامة",
+                "site_name": "اسم الموقع",
+                "site_email": "بريد الموقع",
+                "contact_phone": "هاتف الاتصال",
+                "maintenance_mode": "وضع الصيانة",
+                "save": "حفظ الإعدادات"
+            }
+        },
+        "admins": {
+            "title": "إدارة المديرين",
+            "subtitle": "إدارة مديري المنصة (سوبر مدير فقط)",
+            "add_admin": "إضافة مدير",
+            "table": {
+                "name": "الاسم",
+                "email": "البريد الإلكتروني",
+                "role": "الدور",
+                "status": "الحالة",
+                "created": "تاريخ الإنشاء",
+                "last_login": "آخر تسجيل دخول",
+                "actions": "الإجراءات",
+                "edit": "تعديل",
+                "delete": "حذف"
+            },
+            "roles": {
+                "admin": "مدير",
+                "super_admin": "سوبر مدير"
+            },
+            "empty": "لم يتم العثور على مديرين",
+            "empty_subtitle": "أضف مديرين للمساعدة في إدارة المنصة.",
+            "form": {
+                "name": "الاسم الكامل",
+                "email": "عنوان البريد الإلكتروني",
+                "password": "كلمة المرور",
+                "role": "الدور",
+                "create": "إنشاء مدير",
+                "cancel": "إلغاء"
+            },
+            "confirm_delete": "هل أنت متأكد من إزالة صلاحيات المدير من هذا المستخدم؟"
+        },
+        "shared": {
+            "status_badge": {
+                "pending": "قيد الانتظار",
+                "approved": "موافق عليه",
+                "rejected": "مرفوض",
+                "active": "نشط",
+                "inactive": "غير نشط",
+                "suspended": "معلق",
+                "verified": "موثق",
+                "confirmed": "مؤكد",
+                "completed": "مكتمل",
+                "cancelled": "ملغي"
+            },
+            "actions": {
+                "view": "عرض",
+                "edit": "تعديل",
+                "delete": "حذف",
+                "approve": "موافقة",
+                "reject": "رفض",
+                "suspend": "تعليق",
+                "activate": "تفعيل",
+                "verify": "توثيق",
+                "save": "حفظ",
+                "cancel": "إلغاء",
+                "confirm": "تأكيد",
+                "close": "إغلاق"
+            },
+            "filters": {
+                "search": "بحث...",
+                "status": "الحالة",
+                "role": "الدور",
+                "type": "النوع",
+                "date_from": "من",
+                "date_to": "إلى",
+                "apply": "تطبيق الفلاتر",
+                "clear": "مسح الفلاتر"
+            },
+            "empty_states": {
+                "no_results": "لم يتم العثور على نتائج",
+                "try_different": "جرب فلاتر أو مصطلحات بحث مختلفة"
+            },
+            "messages": {
+                "success": "تمت العملية بنجاح!",
+                "error": "حدث خطأ. يرجى المحاولة مرة أخرى.",
+                "confirm_title": "هل أنت متأكد؟",
+                "confirm_delete": "لا يمكن التراجع عن هذا الإجراء.",
+                "loading": "جارٍ التحميل..."
+            },
+            "pagination": {
+                "showing": "عرض",
+                "to": "إلى",
+                "of": "من",
+                "results": "نتائج",
+                "previous": "السابق",
+                "next": "التالي"
+            }
         }
     },
     "common": {

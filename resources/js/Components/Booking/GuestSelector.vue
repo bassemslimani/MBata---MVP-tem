@@ -18,7 +18,7 @@ const props = defineProps({
         type: String,
         default: 'Guests',
     },
-}
+})
 
 const emit = defineEmits(['update:modelValue'])
 

@@ -548,6 +548,270 @@
             "recent_activity": "Activité récente",
             "pending_payments": "Paiements en attente",
             "all_caught_up": "Tout est à jour !"
+        },
+        "nav": {
+            "dashboard": "Tableau de bord",
+            "users": "Utilisateurs",
+            "properties": "Propriétés",
+            "reservations": "Réservations",
+            "reviews": "Avis",
+            "payments": "Paiements",
+            "admins": "Administrateurs",
+            "settings": "Paramètres",
+            "reports": "Rapports",
+            "activity": "Journal d'activité"
+        },
+        "users": {
+            "title": "Gestion des utilisateurs",
+            "subtitle": "Gérer tous les utilisateurs de la plateforme",
+            "add_user": "Ajouter un utilisateur",
+            "search_placeholder": "Rechercher par nom ou email...",
+            "filter_role": "Filtrer par rôle",
+            "filter_status": "Filtrer par statut",
+            "table": {
+                "name": "Nom",
+                "email": "Email",
+                "role": "Rôle",
+                "status": "Statut",
+                "properties": "Propriétés",
+                "reservations": "Réservations",
+                "joined": "Inscrit",
+                "actions": "Actions",
+                "view": "Voir",
+                "edit": "Modifier",
+                "delete": "Supprimer",
+                "suspend": "Suspendre",
+                "activate": "Activer",
+                "verify": "Vérifier"
+            },
+            "roles": {
+                "user": "Utilisateur",
+                "owner": "Propriétaire",
+                "admin": "Admin",
+                "super_admin": "Super Admin"
+            },
+            "statuses": {
+                "active": "Actif",
+                "suspended": "Suspendu",
+                "pending": "En attente",
+                "inactive": "Inactif"
+            },
+            "empty": "Aucun utilisateur trouvé",
+            "empty_subtitle": "Commencez par ajouter un nouvel utilisateur à la plateforme.",
+            "confirm_delete": "Êtes-vous sûr de vouloir supprimer cet utilisateur ?",
+            "confirm_suspend": "Êtes-vous sûr de vouloir suspendre cet utilisateur ?",
+            "confirm_activate": "Êtes-vous sûr de vouloir activer cet utilisateur ?"
+        },
+        "properties": {
+            "title": "Modération des propriétés",
+            "subtitle": "Examiner et gérer les annonces de propriétés",
+            "search_placeholder": "Rechercher des propriétés...",
+            "filter_status": "Filtrer par statut",
+            "filter_type": "Filtrer par type",
+            "table": {
+                "title": "Titre",
+                "owner": "Propriétaire",
+                "location": "Emplacement",
+                "type": "Type",
+                "price": "Prix/Nuit",
+                "status": "Statut",
+                "verified": "Vérifié",
+                "created": "Créé",
+                "actions": "Actions",
+                "view": "Voir",
+                "approve": "Approuver",
+                "reject": "Rejeter",
+                "delete": "Supprimer"
+            },
+            "statuses": {
+                "pending": "En attente",
+                "approved": "Approuvé",
+                "rejected": "Rejeté",
+                "suspended": "Suspendu",
+                "active": "Actif",
+                "inactive": "Inactif"
+            },
+            "empty": "Aucune propriété trouvée",
+            "empty_subtitle": "Les propriétés en attente de modération apparaîtront ici.",
+            "confirm_approve": "Êtes-vous sûr de vouloir approuver cette propriété ?",
+            "confirm_reject": "Êtes-vous sûr de vouloir rejeter cette propriété ?",
+            "confirm_delete": "Êtes-vous sûr de vouloir supprimer cette propriété ?"
+        },
+        "reservations": {
+            "title": "Toutes les réservations",
+            "subtitle": "Voir et gérer toutes les réservations",
+            "search_placeholder": "Rechercher par ID, client ou propriété...",
+            "filter_status": "Filtrer par statut",
+            "filter_date": "Filtrer par plage de dates",
+            "table": {
+                "id": "ID Réservation",
+                "property": "Propriété",
+                "guest": "Client",
+                "check_in": "Arrivée",
+                "check_out": "Départ",
+                "guests": "Voyageurs",
+                "total": "Total",
+                "payment": "Paiement",
+                "status": "Statut",
+                "actions": "Actions",
+                "view": "Voir détails",
+                "cancel": "Annuler"
+            },
+            "statuses": {
+                "pending": "En attente",
+                "confirmed": "Confirmé",
+                "completed": "Terminé",
+                "cancelled": "Annulé"
+            },
+            "empty": "Aucune réservation trouvée",
+            "empty_subtitle": "Toutes les réservations de la plateforme apparaîtront ici.",
+            "payment_methods": {
+                "card": "Carte",
+                "ccp": "CCP",
+                "cash": "Paiement à l'arrivée"
+            }
+        },
+        "reviews": {
+            "title": "Modération des avis",
+            "subtitle": "Gérer les avis et notes des utilisateurs",
+            "search_placeholder": "Rechercher des avis...",
+            "filter_rating": "Filtrer par note",
+            "filter_status": "Filtrer par statut",
+            "table": {
+                "property": "Propriété",
+                "user": "Utilisateur",
+                "rating": "Note",
+                "comment": "Commentaire",
+                "created": "Date",
+                "status": "Statut",
+                "actions": "Actions",
+                "approve": "Approuver",
+                "reject": "Rejeter",
+                "delete": "Supprimer"
+            },
+            "statuses": {
+                "pending": "En attente",
+                "approved": "Approuvé",
+                "flagged": "Signalé",
+                "hidden": "Masqué"
+            },
+            "empty": "Aucun avis trouvé",
+            "empty_subtitle": "Les avis en attente de modération apparaîtront ici.",
+            "confirm_delete": "Êtes-vous sûr de vouloir supprimer cet avis ?"
+        },
+        "settings": {
+            "title": "Paramètres de la plateforme",
+            "subtitle": "Gérer la configuration de la plateforme",
+            "currency": {
+                "title": "Taux de change des devises",
+                "subtitle": "Gérer les taux de change pour le support multi-devises",
+                "base_currency": "Devise de base (DZD)",
+                "rates": {
+                    "eur": "Euro (EUR)",
+                    "usd": "Dollar US (USD)",
+                    "last_updated": "Dernière mise à jour : {date}"
+                },
+                "update": "Mettre à jour les taux",
+                "auto_update": "Mise à jour automatique quotidienne",
+                "save": "Enregistrer les taux",
+                "saved": "Taux de change mis à jour avec succès !"
+            },
+            "general": {
+                "title": "Paramètres généraux",
+                "site_name": "Nom du site",
+                "site_email": "Email du site",
+                "contact_phone": "Téléphone de contact",
+                "maintenance_mode": "Mode maintenance",
+                "save": "Enregistrer les paramètres"
+            }
+        },
+        "admins": {
+            "title": "Gestion des administrateurs",
+            "subtitle": "Gérer les administrateurs de la plateforme (Super Admin uniquement)",
+            "add_admin": "Ajouter un admin",
+            "table": {
+                "name": "Nom",
+                "email": "Email",
+                "role": "Rôle",
+                "status": "Statut",
+                "created": "Créé",
+                "last_login": "Dernière connexion",
+                "actions": "Actions",
+                "edit": "Modifier",
+                "delete": "Supprimer"
+            },
+            "roles": {
+                "admin": "Admin",
+                "super_admin": "Super Admin"
+            },
+            "empty": "Aucun administrateur trouvé",
+            "empty_subtitle": "Ajoutez des administrateurs pour aider à gérer la plateforme.",
+            "form": {
+                "name": "Nom complet",
+                "email": "Adresse email",
+                "password": "Mot de passe",
+                "role": "Rôle",
+                "create": "Créer un admin",
+                "cancel": "Annuler"
+            },
+            "confirm_delete": "Êtes-vous sûr de vouloir retirer les droits d'admin à cet utilisateur ?"
+        },
+        "shared": {
+            "status_badge": {
+                "pending": "En attente",
+                "approved": "Approuvé",
+                "rejected": "Rejeté",
+                "active": "Actif",
+                "inactive": "Inactif",
+                "suspended": "Suspendu",
+                "verified": "Vérifié",
+                "confirmed": "Confirmé",
+                "completed": "Terminé",
+                "cancelled": "Annulé"
+            },
+            "actions": {
+                "view": "Voir",
+                "edit": "Modifier",
+                "delete": "Supprimer",
+                "approve": "Approuver",
+                "reject": "Rejeter",
+                "suspend": "Suspendre",
+                "activate": "Activer",
+                "verify": "Vérifier",
+                "save": "Enregistrer",
+                "cancel": "Annuler",
+                "confirm": "Confirmer",
+                "close": "Fermer"
+            },
+            "filters": {
+                "search": "Rechercher...",
+                "status": "Statut",
+                "role": "Rôle",
+                "type": "Type",
+                "date_from": "De",
+                "date_to": "À",
+                "apply": "Appliquer les filtres",
+                "clear": "Effacer les filtres"
+            },
+            "empty_states": {
+                "no_results": "Aucun résultat trouvé",
+                "try_different": "Essayez différents filtres ou termes de recherche"
+            },
+            "messages": {
+                "success": "Opération terminée avec succès !",
+                "error": "Une erreur s'est produite. Veuillez réessayer.",
+                "confirm_title": "Êtes-vous sûr ?",
+                "confirm_delete": "Cette action ne peut pas être annulée.",
+                "loading": "Chargement..."
+            },
+            "pagination": {
+                "showing": "Affichage",
+                "to": "à",
+                "of": "sur",
+                "results": "résultats",
+                "previous": "Précédent",
+                "next": "Suivant"
+            }
         }
     },
     "common": {
